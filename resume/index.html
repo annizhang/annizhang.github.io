@@ -3,13 +3,13 @@
 <html>
     <head>
         <link href="/normalize.css" rel="stylesheet">
-        <script type='text/javascript'>
+        <!--<script type='text/javascript'>
             function embedPDF(){
                 var myPDF = new PDFObject({
-                    url: 'annizhang.me/resume/anni_zhangRESUME2015.pdf'
+                    url: '/resume/anni_zhangRESUME2015.pdf'
                 }).embed();}
             window.onload = embedPDF; //Feel free to replace window.onload if needed.
-        </script>
+        </script>-->
         <title>//RESUME//</title>
         <style>
             p {
@@ -22,6 +22,10 @@
         </style>
     </head>
     <body>
-        <p>It appears you don't have a PDF plugin for this browser.<a href="/resume/anni_zhangRESUME2015.pdf">click here to download the PDF file.</a></p>
+        <object data='lala.pdf#'
+                width="100%"
+                height="100%"
+                type='application/pdf'><p>It appears you don't have a PDF plugin for this browser.<a href="/resume/anni_zhangRESUME2015.pdf">click here to download the PDF file.</a></p></object>
+            
     </body>
 </html>
