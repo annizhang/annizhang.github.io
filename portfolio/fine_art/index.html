@@ -25,66 +25,49 @@
             color: slategray;
             text-decoration-color:palegreen;
         }
-        .flip ul{
-            text-decoration: none;
-            list-style-type: none;
-            font-family: sans-serif;
-            padding-left; 10px;
-            font-size: 12px;
-            <!--background-color: yellow;-->
+         #cf7_controls {
+            text-align:center;
+            float:left;
         }
-        #menu li{
-            padding-bottom: 10px;
+        #cf7_controls span {
+            margin-top: 500px;
+            padding-right:2px;
+            cursor:pointer;
         }
-        #menu li:hover{
-            color:#6CA058;
-        }
-        .page {
-            text-decoration: none;
-            padding-left: 10px;
-            cursor: pointer;
-        }
-        .page li{
-            display: inline;
-            font-family: sans-serif;
-            font-size: 13px;
-            color: #ff8484;
-            font-style: bold;
-            cursor: pointer;
-        }
-        .page li:hover{
-            font-size:16px;
-            
+        #cf7 {
+            position:relative;
+            height:281px;
+            width:450px;
+            margin:0 auto 10px;
         }
         #cf7 img{
             position: absolute;
-            @-webkit-transition: opacity 1s ease-in-out;
-            @-moz-transition: opacity 1s ease-in-out;
-            @-o-transition: opacity 1s ease-in-out;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
             transition: opacity 1s ease-in-out;
             opacity:0;
-            @-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
             filter: alpha(opacity=0);
         }
         #cf7 img.opaque{
             opacity:1;
-            @-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             filter: alpha(opacity=1);
         }
 
     </style>
     <script src="jquery.js"></script>
-    <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
     <script>
-       $(document).ready(function() {
-           $("#menu li").on('click', 'li', function() {
-               $("#cf7 img").removeClass("opaque");
-               var newImage = $(this).index();
-               $("#cf7 img").eq(newImage).addClass("opaque");
-               $("#menu li").removeClass("selected");
-               $(this).addClass("selected");
-           });
-       }); 
+        $(document).ready(function() {
+            $("#cf7_controls").on('click', 'span', function() {
+                $("#cf7 img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#cf7 img").eq(newImage).addClass("opaque");
+                $("#cf7_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
     </script>
 </head>
 <body>
@@ -97,30 +80,18 @@
     </div>
     <div style="width: 100%; overflow: hidden;">
         <div style="width: 250px; height: 250px; float: left;" class="flip">
-            <ul id = "menu">
-                <li style="color: #6CA058; text-decoration: underline;" class="selected"><strong>chicken story</strong></li>
-                <li >antler</li>
-                <li>purple jersey</li>
-                <li>nat geo</li>
-                <li>pigeon</li>
-                <li>#owl</li>
-                <li>still flower</li>
-                <li>LEFT: burger & fries </li>
-            </ul>
-            <div class = "page">
-                <ul style="display: inline; list-style-type: none;">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                </ul>
-            </div>
+            <p id="cf7_controls">
+                  <span class="selected">1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+            </p>
         </div>
-        <div style="margin-left: 270px;" class = "show" id = "cf7"> 
-            <img class = "opaque" src="/images/chickenstory/img002.jpg">
-            <img src = "/images/chickenstory/img004.jpg">
-            <img src = "/images/chickenstory/img005.jpg">
-            <img src = "/images/chickenstory/img007.jpg">
+        <div style="margin-left: 270px;" id="cf7" class="shadow">
+              <img class='opaque' src="/images/chickenstory/img002.jpg" />
+              <img src="/images/chickenstory/img004.jpg" />
+              <img src="/images/chickenstory/img005.jpg" />
+              <img src="/images/chickenstory/img007.jpg" />
         </div>
     </div>
     
