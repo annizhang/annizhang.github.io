@@ -75,7 +75,7 @@
     <script src="jquery.js"></script>
     <script>
        $(document).ready(function() {
-           $("#menu li").on('click', '#menu li', function() {
+           $("#menu li").on('click', 'li', function() {
                $("#cf7 img").removeClass("opaque");
                var newImage = $(this).index();
                $("#cf7 img").eq(newImage).addClass("opaque");
