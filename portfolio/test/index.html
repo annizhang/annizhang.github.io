@@ -1,12 +1,59 @@
 <!DOCTYPE html>
+<html>
 <head>
     <link href="/normalize.css" rel="stylesheet">
     <link href="#" rel="stylesheet" type="text/css"> <!-- this for font-->
+    <style>
+        #cf7_controls {
+            text-align:center;
+        }
+        #cf7_controls span {
+            padding-right:2em;
+            cursor:pointer;
+        }
+        #cf7 {
+            position:relative;
+            height:281px;
+            width:450px;
+            margin:0 auto 10px;
+        }
+        #cf7 img {
+            position:absolute;
+          left:0;
+          -webkit-transition: opacity 1s ease-in-out;
+          -moz-transition: opacity 1s ease-in-out;
+          -o-transition: opacity 1s ease-in-out;
+          transition: opacity 1s ease-in-out;
+          opacity:0;
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          filter: alpha(opacity=0);
+        }
+
+        #cf7 img.opaque {
+          opacity:1;
+          -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          filter: alpha(opacity=1);
+        }
+        
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#cf7_controls").on('click', 'span', function() {
+                $("#cf7 img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#cf7 img").eq(newImage).addClass("opaque");
+                $("#cf7_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+</head>
 <div id="cf7" class="shadow">
   <img class='opaque' src="/images/Cirques.jpg" />
-  <img src="/images/Clown%20Fish.jpg;" />
-  <img src="/images/Stones.jpg;" />
-  <img src="/images/Summit.jpg;" />
+  <img src="/images/chickenstory/img002.jpg" />
+  <img src="/images/chickenstory/img004.jpg" />
+  <img src="/images/chickenstory/img005.jpg" />
+  <img src="/images/chickenstory/img007.jpg" />
 </div>
 <p id="cf7_controls">
   <span class="selected">Image 1</span>
