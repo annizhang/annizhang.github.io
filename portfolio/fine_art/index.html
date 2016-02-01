@@ -24,7 +24,7 @@
             color: slategray;
             text-decoration-color:palegreen;
         }
-        .menu ul{
+        #menu ul{
             text-decoration: none;
             list-style-type: none;
             font-family: sans-serif;
@@ -32,10 +32,10 @@
             font-size: 12px;
             <!--background-color: yellow;-->
         }
-        .menu li{
+        #menu li{
             padding-bottom: 10px;
         }
-        .menu li:hover{
+        #menu li:hover{
             color:#6CA058;
         }
         .page {
@@ -55,24 +55,47 @@
             font-size:16px;
             
         }
+        #cf7 img{
+            position: absolute;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        #cf7 img.opaque{
+            opacity:1;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
+        }
 
     </style>
     <script>
-        
+       $(document).ready(function() {
+           $("#menu li").on('click', '#menu li', function() {
+               $("#cf7 img").removeClass("opaque");
+               var newImage = $(this).index();
+               $("#cf7 img").eq(newImage).addClass("opaque");
+               $("#menu li").removeClass("selected");
+               $(this).addClass("selected");
+           });
+       }); 
     </script>
 </head>
 <body>
     <div class = "nav">
         <ul>
-            <li><strong><a href="/portfolio/fine_art"; style="color: gray">fine arts</a> //</strong></li>
-            <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> //</strong></li>
-            <li><strong><a href="/photos">photography</a> //</strong></li>
+            <li><strong><a href="/portfolio/fine_art"; style="color: gray">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
+            <li><strong><a href="/photos">photography</a> &</strong></li>
         </ul>
     </div>
     <div style="width: 100%; overflow: hidden;">
-        <div style="width: 250px; height: 250px; float: left;" class = "menu">
+        <div style="width: 250px; height: 250px; float: left;" id = "menu">
             <ul>
-                <li style="color: #6CA058; text-decoration: underline;"><strong>chicken story</strong></li>
+                <li style="color: #6CA058; text-decoration: underline;" class="selected"><strong>chicken story</strong></li>
                 <li >antler</li>
                 <li>purple jersey</li>
                 <li>nat geo</li>
@@ -90,8 +113,11 @@
                 </ul>
             </div>
         </div>
-        <div style="margin-left: 270px;" class = "show"> 
-            <img src="/images/chickenstory/img002.jpg">
+        <div style="margin-left: 270px;" class = "show" id = "cf7"> 
+            <img class = "opaque" src="/images/chickenstory/img002.jpg">
+            <img src = "/images/chickenstory/img004.jpg">
+            <img src = "/images/chickenstory/img005.jpg">
+            <img src = "/images/chickenstory/img007.jpg">
         </div>
     </div>
     
