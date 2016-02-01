@@ -8,6 +8,9 @@
     
     <title>//FINE ARTS//</title>
     <style>
+        body{
+            font-family: sans-serif;
+        }
         .nav ul{
             text-decoration: none;
             font-size: 45px;
@@ -30,9 +33,11 @@
             margin-left:20px;-->
         }
         #cf7_controls span {
-            <!--margin-top: 500px;
-            padding-right:2px;-->
             cursor:pointer;
+        }
+        span:hover{
+            font-style: bold;
+            color: lightcoral;
         }
         #cf7 {
             width:350px;
@@ -67,6 +72,15 @@
             list-style-type: none;  
             padding-bottom: 10px;
         }
+        .flip ul li:hover{
+            color: lightcoral;
+            font-style: bold;
+            cursor: pointer;
+        }
+        .cur {
+            color: lightcoral;
+            font-style: bold;
+        }
 
     </style>
     <script src="jquery.js"></script>
@@ -94,7 +108,7 @@
     <div style="width: 100%; overflow: hidden;">
         <div style="width: 200px; height: 250px; float: left;" class="flip">
             <ul>
-                <li>chicken story</li>
+                <li class="cur">chicken story</li>
                 <li>antler</li>
                 <li>purple skyline</li>
                 <li>nat geo</li>
