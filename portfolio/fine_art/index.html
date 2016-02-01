@@ -25,13 +25,13 @@
             color: slategray;
             text-decoration-color:palegreen;
         }
-         #cf7_controls {
-            width: 100px;
-            margin-left:20px;
+        .flip #cf7_controls {
+            <!--width: 100px;
+            margin-left:20px;-->
         }
         #cf7_controls span {
-            margin-top: 500px;
-            padding-right:2px;
+            <!--margin-top: 500px;
+            padding-right:2px;-->
             cursor:pointer;
         }
         #cf7 {
@@ -55,17 +55,17 @@
             filter: alpha(opacity=1);
         }
         .flip {
-            background-color:orange;
+            background-color:white;
         }
         .flip ul {
             text-decoration: none;
             list-style-type: none;
             margin-left: 10px;
         }
-        .ul li{
-            display: inline;
+        .flip ul li{
             text-decoration: none;
-            list-style-type: none;      
+            list-style-type: none;  
+            padding-bottom: 10px;
         }
 
     </style>
@@ -99,13 +99,16 @@
                 <li>purple skyline</li>
                 <li>nat geo</li>
                 <li>nyc pigeons</li>
+                <li>
+                    <p id="cf7_controls">
+                          <span class="selected">1</span>
+                          <span>2</span>
+                          <span>3</span>
+                          <span>4</span>
+                    </p>
+                </li>
             </ul>
-            <p id="cf7_controls">
-                  <span class="selected">1</span>
-                  <span>2</span>
-                  <span>3</span>
-                  <span>4</span>
-            </p>
+           
         </div>
         <div id="cf7">
               <img class='opaque' src="/images/chickenstory/img002.jpg" />
