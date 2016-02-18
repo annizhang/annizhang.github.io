@@ -1,5 +1,5 @@
 <!-- ANNIZHANG.ME PORTFOLIO/FINE ARTS-->
-<!-- natgeo page -->
+<!-- this has the chicken first -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +10,7 @@
     <style>
         body{
             font-family: futura;
+            text-decoration: none;
         }
         .nav ul{
             text-decoration: none;
@@ -45,7 +46,19 @@
         }
         #cf7 img{
             position: absolute;
-            width: 55%;
+            width: 28%;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        #cf7 img.opaque{
+            opacity:1;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
         }
         .flip {
             background-color:white;
@@ -72,32 +85,43 @@
             color: lightcoral;
             font-style: bold;
         }
+        .selected {
+            color: lightcoral;
+        }
 
     </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#cf7_controls").on('click', 'span', function() {
+                $("#cf7 img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#cf7 img").eq(newImage).addClass("opaque");
+                $("#cf7_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class = "nav">
         <ul>
-           <li><strong><a href="/portfolio/fine_art"; style="color: gray">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/fine_art">fine arts</a> &</strong></li>
             <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
             <li><strong><a href="/photos">photography</a> &</strong></li>
-            <li><strong><a href="/portfolio/digital">digital</a></strong></li>
+            <li><strong><a href="/portfolio/digital"; style="color: gray">digital</a></strong></li>
         </ul>
     </div>
     <div style="width: 100%; overflow: hidden;">
         <div style="width: 200px; height: 250px; float: left;" class="flip">
             <ul>
-                <li><a href = "/portfolio/fine_art">chicken story</a></li>
-                <li><a href = "/portfolio/fine_art/antler">antler</a></li>
-                <li><a href = "/portfolio/fine_art/purple">purple skyline</a></li>
-                <li class="cur">nat geo</li>
-                <li><a href = "/portfolio/fine_art/pigeons">nyc pigeons</a></li>
-                <li><a href = "/portfolio/fine_art/owl">owl</a></li>
+                <li class="cur">futura poster</li>
    
             </ul>
+           
         </div>
         <div id="cf7">
-              <img src="/images/natgeo.jpg" />
+              <img class='opaque' src="/images/futura_CORRECT.jpg" />
         </div>
     </div>
     
