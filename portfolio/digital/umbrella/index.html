@@ -10,7 +10,6 @@
     <style>
         body{
             font-family: futura;
-            text-decoration: none;
         }
         .nav ul{
             text-decoration: none;
@@ -41,24 +40,15 @@
             color: lightcoral;
         }
         #cf7 {
-            width:350px;
+            background-color: gray;
             margin-left: 250px;
         }
         #cf7 img{
-            position: absolute;
-            width: 28%;
-            -webkit-transition: opacity 1s ease-in-out;
-            -moz-transition: opacity 1s ease-in-out;
-            -o-transition: opacity 1s ease-in-out;
-            transition: opacity 1s ease-in-out;
-            opacity:0;
-            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-            filter: alpha(opacity=0);
-        }
-        #cf7 img.opaque{
-            opacity:1;
-            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-            filter: alpha(opacity=1);
+            display: inline-block;
+            width: 30%;
+            float:left;
+            padding-left: 15px;
+            
         }
         .flip {
             background-color:white;
@@ -78,51 +68,42 @@
             font-style: bold;
             cursor: pointer;
         }
+        .flip ul li:visited{
+            color:black;
+        }
+        .flip ul li:active{
+            color:ihnerit;
+        }
         .flip a{
             text-decoration: none;
+            color: black;
         }
         .cur {
             color: lightcoral;
             font-style: bold;
         }
-        .selected {
-            color: lightcoral;
-        }
 
     </style>
-    <script src="jquery.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#cf7_controls").on('click', 'span', function() {
-                $("#cf7 img").removeClass("opaque");
-                var newImage = $(this).index();
-                $("#cf7 img").eq(newImage).addClass("opaque");
-                $("#cf7_controls span").removeClass("selected");
-                $(this).addClass("selected");
-            });
-        });
-    </script>
 </head>
 <body>
     <div class = "nav">
         <ul>
-            <li><strong><a href="/portfolio/fine_art">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/fine_art"; style="color: gray">fine arts</a> &</strong></li>
             <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
             <li><strong><a href="/photos">photography</a> &</strong></li>
-            <li><strong><a href="/portfolio/digital"; style="color: gray">digital</a></strong></li>
+            <li><strong><a href="/portfolio/digital">digital</a></strong></li>
         </ul>
     </div>
-    <div style="width: 100%; overflow: hidden;">
+    <div style="width: 100%">
         <div style="width: 200px; height: 250px; float: left;" class="flip">
             <ul>
-                <li class="cur">futura poster</li>
-                <li><a href ="/portfolio/design/umbrella">umbrella</a></li>
-   
+                <li><a href = "/portfolio/design">futura</a></li>
+                <li class="cur">umbrella</li>
             </ul>
-           
         </div>
         <div id="cf7">
-              <img class='opaque' src="/images/futura_CORRECT.jpg" />
+              <img src="/images/umbrella1.png" />
+              <img src="/images/umbrella2.png"/>
         </div>
     </div>
     
