@@ -1,49 +1,161 @@
-<!-- ANNIZHANG.ME PHOTOS-->
+<!-- ANNIZHANG.ME PORTFOLIO/FINE ARTS-->
+<!-- Photos page-->
 <!DOCTYPE html>
+<html>
 <head>
     <link href="/normalize.css" rel="stylesheet">
     <link href="#" rel="stylesheet" type="text/css"> <!-- this for font-->
+    
+    <title>//Photgraphy//</title>
     <style>
-        .image{
-            height: 500px;
-            width: 800px;
-            float: left;
-            display: inline-block;
-            padding: 10px;
+        body{
+            font-family: futura;
+            text-decoration: none;
         }
-        .image img {
-            height: 100%;
-            width: auto;
+        .nav ul{
+            text-decoration: none;
+            font-size: 45px;
         }
-        .slideshow{
-            background-color: yellow;
-            width: 8000px;
-            margin: 70px;
+        .nav li{
+            display: inline;
+            font-family: futura;
         }
+        .nav a{
+            text-decoration: none;
+            color: gray;
+        }
+        a:hover{
+            font-style: italic;
+            color: slategray;
+            text-decoration-color:palegreen;
+        }
+        #slideshow_controls{
+            margin-left:50px;
+        }
+        #slideshow_controls span {
+            cursor:pointer;
+        }
+        span:hover{
+            font-style: bold;
+            color: lightcoral;
+        }
+        #slideshow {
+            width:350px;
+            margin-left: 250px;
+        }
+        #slideshow img{
+            position: absolute;
+            width: 55%;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        #slideshow img.opaque{
+            opacity:1;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
+        }
+        .flip {
+            background-color:white;
+        }
+        .flip ul {
+            text-decoration: none;
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        .flip ul li{
+            text-decoration: none;
+            list-style-type: none;  
+            padding-bottom: 10px;
+        }
+        .flip ul li:hover{
+            color: lightcoral;
+            font-style: bold;
+            cursor: pointer;
+        }
+        .flip a{
+            text-decoration: none;
+        }
+        .cur {
+            color: lightcoral;
+            font-style: bold;
+        }
+        .selected {
+            color: lightcoral;
+        }
+        .plaque{
+            width:300px;
+            float:right;
+            margin-right: 30px;
+        }
+
     </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#slideshow_controls").on('click', 'span', function() {
+                $("#slideshow img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#slideshow img").eq(newImage).addClass("opaque");
+                $("#slideshow_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1> </h1>
-    </header>
-    <div class="slideshow">
-        <div class="image">
-            <img src =      "https://40.media.tumblr.com/11c3bfd967a88fc2ccc97da8ceb36315/tumblr_nu8nrtuWdz1qd5e9to2_1280.jpg">
+    <div class = "nav">
+        <ul>
+            <li><strong><a href="/portfolio/fine_art">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
+            <li><strong><a href="/photos"; style="color: lightcoral">photography</a> &</strong></li>
+            <li><strong><a href="/portfolio/digital">digital</a></strong></li>
+        </ul>
+    </div>
+    <div style="width: 100%; overflow: hidden;">
+        <div style="width: 275px; height: 250px; float: left;" class="flip">
+            <ul>
+                <li class="cur">Nestie</li>
+                <li><a href = "/portfolio/photos/shanghai">green shanghai</a></li>
+                <li><a href = "/portfolio/photos/baotou">home</a></li>
+            </ul>
+             <p id="slideshow_controls">
+                <span class="selected">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+            </p>
+           
         </div>
-        <div class="image">
-            <img src = "https://41.media.tumblr.com/2823a48b2e132d653ee505ab67117680/tumblr_nu8nrtuWdz1qd5e9to3_1280.jpg">
+        <div id="slideshow">
+              <img class='opaque' src="/images/LESapartment_ANIMALS/thirdst1.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst2.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst3.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst4.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst5.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst6.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst7.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst8.jpg" />
+              <img src="/images/LESapartment_ANIMALS/thirdst9.jpg" />
+            
         </div>
-        <div class="image">
-            <img src = "https://41.media.tumblr.com/30985441ebe6871fd3f5933d7e0d0b5c/tumblr_nu8nrtuWdz1qd5e9to4_1280.jpg">
-        </div>
-        <div class="image">
-            <img src = "https://40.media.tumblr.com/b9d8087de57fdaa0225d300c057fef6b/tumblr_nu8nrtuWdz1qd5e9to6_1280.jpg">
-        </div>
-        <div class="image">
-            <img src = "https://41.media.tumblr.com/32b235259aff9e62d9871b2ac1d8189b/tumblr_nu8nrtuWdz1qd5e9to8_1280.jpg">
-        </div>
-        <div class="image">
-            <img src = "https://41.media.tumblr.com/07a44337c9b792b7065f7b812c226683/tumblr_nu8nrtuWdz1qd5e9to1_1280.jpg">
+        <div class="plaque">
+            <h3>Nestie Apartment Photographs</h3>
+            <h5 style="color:gray;">Digital Photography. July 2015</h5>
+            <p style="font-size:12px;">During my summer internship at Nestie, I photographed user's apartments and edited them using Photoshop for the website. These photographs drew more vistors to the site and were super fun to make.</p>
+            <p style="color:coral; font-size:13px;">click on page numbers on the left to navigate through this piece</p>
         </div>
     </div>
+    
+
 </body>
+</html>

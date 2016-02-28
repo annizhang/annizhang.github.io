@@ -1,0 +1,156 @@
+<!-- ANNIZHANG.ME PORTFOLIO/FINE ARTS-->
+<!-- this has the chicken first -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="#" rel="stylesheet" type="text/css"> <!-- this for font-->
+    
+    <title>//FINE ARTS//</title>
+    <style>
+        body{
+            font-family: futura;
+            text-decoration: none;
+        }
+        .nav ul{
+            text-decoration: none;
+            font-size: 45px;
+        }
+        .nav li{
+            display: inline;
+            font-family: futura;
+        }
+        .nav a{
+            text-decoration: none;
+            color: gray;
+        }
+        a:hover{
+            font-style: italic;
+            color: slategray;
+            text-decoration-color:palegreen;
+        }
+        #slideshow_controls{
+            margin-left:50px;
+        }
+        #slideshow_controls span {
+            cursor:pointer;
+        }
+        span:hover{
+            font-style: bold;
+            color: lightcoral;
+        }
+        #slideshow {
+            width:350px;
+            margin-left: 250px;
+        }
+        #slideshow img{
+            position: absolute;
+            width: 55%;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        #slideshow img.opaque{
+            opacity:1;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
+        }
+        .flip {
+            background-color:white;
+        }
+        .flip ul {
+            text-decoration: none;
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        .flip ul li{
+            text-decoration: none;
+            list-style-type: none;  
+            padding-bottom: 10px;
+        }
+        .flip ul li:hover{
+            color: lightcoral;
+            font-style: bold;
+            cursor: pointer;
+        }
+        .flip a{
+            text-decoration: none;
+        }
+        .cur {
+            color: lightcoral;
+            font-style: bold;
+        }
+        .selected {
+            color: lightcoral;
+        }
+        .plaque{
+            width:300px;
+            float:right;
+            margin-right: 30px;
+        }
+
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#slideshow_controls").on('click', 'span', function() {
+                $("#slideshow img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#slideshow img").eq(newImage).addClass("opaque");
+                $("#slideshow_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class = "nav">
+        <ul>
+            <li><strong><a href="/portfolio/fine_art"; style="color: lightcoral">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
+            <li><strong><a href="/photos">photography</a> &</strong></li>
+            <li><strong><a href="/portfolio/digital">digital</a></strong></li>
+        </ul>
+    </div>
+    <div style="width: 100%; overflow: hidden;">
+        <div style="width: 200px; height: 250px; float: left;" class="flip">
+            <ul>
+                <li class="cur">chicken story</li>
+                <li><a href = "/portfolio/fine_art/antler">antler</a></li>
+                <li><a href = "/portfolio/fine_art/purple">purple skyline</a></li>
+                <li><a href = "/portfolio/fine_art/natgeo">nat geo</a></li>
+                <li><a href = "/portfolio/fine_art/pigeons">nyc pigeons</a></li>
+                <li><a href = "/portfolio/fine_art/owl">owl</a></li>
+                <li><a href = "/portfolio/fine_art/weaving/">weaving</a></li>
+                <li><a href = "/portfolio/fine_art/burger/">burger</a></li>
+   
+            </ul>
+             <p id="slideshow_controls">
+                <span class="selected">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </p>
+           
+        </div>
+        <div id="slideshow">
+              <img class='opaque' src="/images/chickenstory/img002.jpg" />
+              <img src="/images/chickenstory/img004.jpg" />
+              <img src="/images/chickenstory/img005.jpg" />
+              <img src="/images/chickenstory/img007.jpg" />
+        </div>
+        <div class="plaque">
+            <h3>Chicken Story</h3>
+            <h5 style="color:gray;">Watercolor 3" x 5". Spring 2014</h5>
+            <p style="font-size:12px;">A series of transitions from birth to childhood, to adulthood, and finally to the end. I was shocked by the meat industry's mass production of chicken products and how little it affected consumers. This work was presented in the form of a flip book so the viewer can only see one page at a time, flipping through the first three the viewer sees innocence, and when they come upon the last page it elicits a reaction and hopefully more thought about where their chicken nuggets come from.</p>
+            <p style="color:coral; font-size:13px;">click on page numbers on the left to navigate through this piece</p>
+        </div>
+    </div>
+    
+
+</body>
+</html>
