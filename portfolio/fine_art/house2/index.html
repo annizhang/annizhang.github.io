@@ -1,5 +1,5 @@
 <!-- ANNIZHANG.ME PORTFOLIO/FINE ARTS-->
-<!-- natgeo page -->
+<!-- house 2 plans -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,12 +40,16 @@
             color: lightcoral;
         }
         #cf7 {
-            width:350px;
+            background-color: gray;
             margin-left: 250px;
         }
         #cf7 img{
-            position: absolute;
-            width: 55%;
+            <!--display: inline-block;-->
+            width: 30%;
+            float:left;
+            padding-left: 15px;
+            padding-top: 20px;
+            
         }
         .flip {
             background-color:white;
@@ -65,8 +69,15 @@
             font-style: bold;
             cursor: pointer;
         }
+        .flip ul li:visited{
+            color:black;
+        }
+        .flip ul li:active{
+            color:ihnerit;
+        }
         .flip a{
             text-decoration: none;
+            color: black;
         }
         .cur {
             color: lightcoral;
@@ -83,34 +94,37 @@
 <body>
     <div class = "nav">
         <ul>
-            <li><strong><a href="/portfolio/fine_art"; style="color: gray">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/fine_art">fine arts</a> &</strong></li>
             <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
             <li><strong><a href="/photos">photography</a> &</strong></li>
-            <li><strong><a href="/portfolio/digital">digital</a></strong></li>
+            <li><strong><a href="/portfolio/digital"; style="color: gray;">digital</a></strong></li>
         </ul>
     </div>
-    <div style="width: 100%; overflow: hidden;">
-        <div style="width: 200px; height: 300px; float: left;" class="flip">
+    <div style="width: 100%">
+        <div style="width: 200px; height: 250px; float: left;" class="flip">
             <ul>
                 <li><a href = "/portfolio/fine_art">chicken story</a></li>
                 <li><a href = "/portfolio/fine_art/antler">antler</a></li>
                 <li><a href = "/portfolio/fine_art/purple">purple skyline</a></li>
                 <li><a href = "/portfolio/fine_art/natgeo">nat geo</a></li>
-                <li class="cur">nyc pigeons</li>
+                <li><a href = "/portfolio/fine_art/pigeons">nyc pigeons</a></li>
                 <li><a href = "/portfolio/fine_art/owl">owl</a></li>
                 <li><a href = "/portfolio/fine_art/weaving/">weaving</a></li>
                 <li><a href = "/portfolio/fine_art/burger/">burger</a></li>
-   
+                <li><a href = "/portfolio/fine_art/house/">house one</a></li>
+                <li class="cur">house two</li>
             </ul>
         </div>
+         <div class="plaque">
+            <h3>House Exterior Design</h3>
+            <h5 style="color:gray;">Pencil on paper, 10" x 18"</h5>
+            <p style="font-size:12px;">An assignment for Introduction to Architecture. Applied drafting and technical drawing skills, in addition to planning the design from sketches until the final product. </p>
+        </div>
         <div id="cf7">
-              <img src="/images/pigeon.jpg" />
+              <img src="/images/arch1.jpg" />
+              <img src="/images/arch2.jpg"/>
         </div>
-        <div class="plaque">
-            <h3>Pigeons of New York</h3>
-            <h5 style="color:gray;">Watercolor and crayon 8" x 11". Spring 2014</h5>
-             <p style="font-size:12px;">Honoring an underrated bird and forgotten hero. The process involved first creating a stencil using cardstock, then imprinting onto a paper using crayons and then painting with watercolor.</p>
-        </div>
+       
     </div>
     
 
