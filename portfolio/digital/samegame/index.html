@@ -1,0 +1,156 @@
+<!-- ANNIZHANG.ME PORTFOLIO/FINE ARTS-->
+<!-- SameGame -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="#" rel="stylesheet" type="text/css"> <!-- this for font-->
+    
+    <title>//SAME GAME//</title>
+    <style>
+        body{
+            font-family: futura;
+            text-decoration: none;
+        }
+        .nav ul{
+            text-decoration: none;
+            font-size: 45px;
+        }
+        .nav li{
+            display: inline;
+            font-family: futura;
+        }
+        .nav a{
+            text-decoration: none;
+            color: gray;
+        }
+        a:hover{
+            font-style: italic;
+            color: slategray;
+            text-decoration-color:palegreen;
+        }
+        .flip #cf7_controls {
+            <!--width: 100px;
+            margin-left:50px;-->
+        }
+        #cf7_controls span {
+            cursor:pointer;
+        }
+        span:hover{
+            font-style: bold;
+            color: lightcoral;
+        }
+        #cf7 {
+            width:350px;
+            margin-left: 250px;
+        }
+        #cf7 img{
+            position: absolute;
+            width: 50%;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+            opacity:0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+        }
+        #cf7 img.opaque{
+            opacity:1;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=1);
+        }
+        .flip {
+            background-color:white;
+        }
+        .flip ul {
+            text-decoration: none;
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        .flip ul li{
+            text-decoration: none;
+            list-style-type: none;  
+            padding-bottom: 10px;
+        }
+        .flip ul li:hover{
+            color: lightcoral;
+            font-style: bold;
+            cursor: pointer;
+        }
+        .flip a{
+            text-decoration: none;
+            color: gray;
+        }
+        .cur {
+            color: lightcoral;
+            font-style: bold;
+        }
+        .selected {
+            color: lightcoral;
+        }
+        .plaque{
+            width:300px;
+            float:right;
+            margin-right: 30px;
+        }
+
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#cf7_controls").on('click', 'span', function() {
+                $("#cf7 img").removeClass("opaque");
+                var newImage = $(this).index();
+                $("#cf7 img").eq(newImage).addClass("opaque");
+                $("#cf7_controls span").removeClass("selected");
+                $(this).addClass("selected");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class = "nav">
+        <ul>
+            <li><strong><a href="/portfolio/fine_art">fine arts</a> &</strong></li>
+            <li><strong><a href="/portfolio/momateen">MoMa Art Show</a> &</strong></li>
+            <li><strong><a href="/photos">photography</a> &</strong></li>
+            <li><strong><a href="/portfolio/digital"; style="color: lightcoral">digital</a></strong></li>
+        </ul>
+    </div>
+    <div style="width: 100%; overflow: hidden;">
+        <div style="width: 200px; height: 250px; float: left;" class="flip">
+            <ul>
+                <li><a href="/portfolio/digital/">futura poster</a></li>
+                <li><a href ="/portfolio/digital/umbrella">umbrella</a></li>
+                <li><a href ="/portfolio/digital/nestie_banner/">nestie banner</a></li>
+                <li class="cur">SameGame</li>
+                <li><a href ="/portfolio/digital/budgie/">Budgie</a></li>
+   
+            </ul>
+           
+        </div>
+              <!--<img class='opaque' src="/images/sameGame1.gif" />-->
+        <img style = "margin-bottom: 15px;" src = "/images/sameGame1.gif"/>
+        <div class="plaque">
+            <h3>SameGame</h3>
+            <h5 style="color:gray;">Python, Tkinter</h5>
+            <p style="font-size:12px;">This was the final homework assignment for 15-112 Fundamentals of Programming. I implemented the classic same game in Python. I designed a flood-fill algorithm to create the select and remove part of the game and to keep score. This assignment was challenging algorithm-wise and we also learned to use FileIO to save a high score. I wanted my game to have a pastel theme so its gentle on the eyes. I was inpsired by flat design and I kept it very minimal and simple. The timer limits how much time the user has when selecting pieces to remove and the user can select the timing, the amount of colors, and the size of the game board. </p>
+        </div>
+        <div style="margin-left: 200px;">
+        <video width="800" controls loop>
+                <source src="/images/gamePlay.mov" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+            <div class="plaque">
+            <h3>SameGame Video Demo</h3>
+            <h5 style="color:gray;">Python, Tkinter</h5>
+            <p style="font-size:12px;">This a video demonstration of how pieces are removed until game over and the high score is updated and displayed on the left.</p>
+        </div>
+        </div>
+        
+    </div>
+    
+
+</body>
+</html>
