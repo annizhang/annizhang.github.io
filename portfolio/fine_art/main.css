@@ -31,12 +31,12 @@ span:hover{
     color: lightcoral;
 }
 #slideshow {
-    width:350px;
+    width:70%;;
     margin-left: 250px;
 }
 #slideshow img{
     /*position: absolute;*/
-    width: 55%;
+    width: 100%;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
