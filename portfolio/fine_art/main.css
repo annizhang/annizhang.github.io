@@ -31,12 +31,15 @@ span:hover{
     color: lightcoral;
 }
 #slideshow {
-    width:40%;
+    width:50%;
     /*margin-left: 250px;*/
     border: 1px solid #000;
+/*    float: left;*/
+/*    margin: 0 auto;*/
 }
 #slideshow img{
     /*position: absolute;*/
+    display: block;
     border: 1px solid red;
     width: 45%;
     -webkit-transition: opacity 1s ease-in-out;
@@ -55,6 +58,9 @@ span:hover{
 .flip {
     background-color:white;
     border: 1px solid green;
+    height: 70%;
+    width: 15%;
+/*    float: left;*/
 }
 .flip ul {
     text-decoration: none;
@@ -84,11 +90,18 @@ span:hover{
 }
 .plaque{
     border: 1px solid blue;
-    width:30%;
-    float:right;
+    width:20%;
+/*    float: left;*/
     margin-right: 10%;
 }
 
 .everything div{
     display: inline-block;
+    margin: 0 auto;
+}
+
+.everything{
+    display: inline-block;
+    width: 100%; 
+    overflow: hidden;
 }
