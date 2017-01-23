@@ -39,7 +39,6 @@ span:hover{
 }
 #slideshow img{
     position: absolute;
-    display: block;
     border: 1px solid red;
     width: 45%;
     -webkit-transition: opacity 1s ease-in-out;
