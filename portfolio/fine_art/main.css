@@ -1,0 +1,86 @@
+/* fine arts main page (chicken) css large screen */
+ body{
+    font-family: futura;
+    text-decoration: none;
+}
+.nav ul{
+    text-decoration: none;
+    font-size: 45px;
+}
+.nav li{
+    display: inline;
+    font-family: futura;
+}
+.nav a{
+    text-decoration: none;
+    color: gray;
+}
+a:hover{
+    font-style: italic;
+    color: slategray;
+    text-decoration-color:palegreen;
+}
+#slideshow_controls{
+    margin-left:50px;
+}
+#slideshow_controls span {
+    cursor:pointer;
+}
+span:hover{
+    font-style: bold;
+    color: lightcoral;
+}
+#slideshow {
+    width:350px;
+    margin-left: 250px;
+}
+#slideshow img{
+    /*position: absolute;*/
+    width: 55%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+#slideshow img.opaque{
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+.flip {
+    background-color:white;
+}
+.flip ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 10px;
+}
+.flip ul li{
+    text-decoration: none;
+    list-style-type: none;  
+    padding-bottom: 10px;
+}
+.flip ul li:hover{
+    color: lightcoral;
+    font-style: bold;
+    cursor: pointer;
+}
+.flip a{
+    text-decoration: none;
+    color: gray;
+}
+.cur {
+    color: lightcoral;
+    font-style: bold;
+}
+.selected {
+    color: lightcoral;
+}
+.plaque{
+    width:300px;
+    float:right;
+    margin-right: 30px;
+}
