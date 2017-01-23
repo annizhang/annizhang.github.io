@@ -38,7 +38,7 @@ span:hover{
 #slideshow img{
     /*position: absolute;*/
     border: 1px solid red;
-    width: 55%;
+    width: 25%;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
