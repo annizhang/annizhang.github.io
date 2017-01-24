@@ -33,14 +33,16 @@ span:hover{
 #slideshow {
     width:50%;
     /*margin-left: 250px;*/
-    height: 70%;
+    height: 50%;
     border: 1px solid #000;
+    align-content: center;
 }
 
 #slideshow img{
+    align-content: center;
     position: absolute;
     border: 1px solid red;
-    width: 45%;
+    width: 40%;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -96,11 +98,12 @@ span:hover{
 
 .everything div{
     display: inline-block;
+    float:left;
 /*    margin: 0 auto;*/
 }
 
 .everything{
-    display: inline-block;
+    position: absolute;
     width: 100%; 
     overflow: hidden;
 }
