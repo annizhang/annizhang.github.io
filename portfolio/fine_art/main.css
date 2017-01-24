@@ -31,15 +31,16 @@ span:hover{
     color: lightcoral;
 }
 #slideshow {
+/*    position:absolute;*/
     width:50%;
+/*  height:60%;*/
     /*margin-left: 250px;*/
-    height: 50%;
+    height: 250px;
     border: 1px solid #000;
     align-content: center;
 }
 
 #slideshow img{
-    align-content: center;
     position: absolute;
     border: 1px solid red;
     width: 40%;
@@ -92,18 +93,17 @@ span:hover{
 .plaque{
     border: 1px solid blue;
     width:20%;
-/*    float: left;*/
     margin-right: 10%;
 }
 
 .everything div{
     display: inline-block;
-    float:left;
-/*    margin: 0 auto;*/
+/*    float:left;*/
+    margin: 0 auto;
 }
 
 .everything{
-    position: absolute;
+    display : inline-block;
     width: 100%; 
     overflow: hidden;
 }
