@@ -35,11 +35,8 @@ span:hover{
     /*margin-left: 250px;*/
     height: 70%;
     border: 1px solid #000;
-/*
-    position: relative;
 }
-*/
-}
+
 #slideshow img{
     position: absolute;
     border: 1px solid red;
